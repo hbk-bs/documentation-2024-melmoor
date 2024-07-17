@@ -1,14 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #c7c4a298;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 90%;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: rgb(86, 110, 71);
+            margin: 30px 0 40px 0;
+            font-weight: 400;
+        }
+
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            background-color: #23521fda;
+            border: none;
+            border-radius: 15px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .button:hover {
+            background-color: #23521f77;
+            transform: scale(1.05);
+		}
+
+
+			.navbar {
+            overflow: hidden;
+            background-color: #152b13da;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Stelle sicher, dass die Navbar über anderen Inhalten liegt */
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+       
+        .navbar a.right {
+            float: right;
+        }
+
+		
+        @media(min-width: 768px) {
+            .container {
+                flex-direction: row;
+                text-align: left;
+                max-width: 80%;
+            }
+            .content {
+                margin-left: 20px;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 <body>
-	<h1>make me your own!</h1>
-	<script src="index.js"></script>
+	
+	
+<div class="navbar">
+	<a href="index.html">★Mel</a>
+	<a href="https://example.com" class="right">Info</a>
+  </div>
+
+    <div class="container">
+        <img src="bilder/stern2.png" alt="">
+        <div class="content">
+            <img src="bilder/portfolio.png" alt="Portfolio Bild">
+            <p>Willkommen auf meiner Website! Hier präsentiere ich Ihnen meine Arbeiten und Projekte, die während des zweiten Semesters im Kurs "Grundlagen der digitalen Kommunikation 2" entstanden sind.</p>
+            <a href="index2.html" class="button">zu den Projekten</a>
+        </div>
+    </div>
 </body>
 </html>
