@@ -84,6 +84,10 @@
             gap: 10px;
             margin-top: 20px; /* Abstand zwischen dem Text und den Buttons */
         }
+        .button:hover {
+            background-color: #23521f77;
+            transform: scale(1.05);
+        }
         .button {
             display: inline-block;
             padding: 12px 25px;
@@ -97,11 +101,13 @@
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .button:hover {
-            background-color: #23521f77;
-            transform: scale(1.05);
+ /* Neuer Style für den fixierten Button */
+ .fixed-button {
+            position: fixed;
+            bottom: 20px; /* Abstand vom unteren Rand des Bildschirms */
+            left: 20px;   /* Abstand vom linken Rand des Bildschirms */
+            z-index: 1000; /* Stelle sicher, dass der Button über anderen Inhalten liegt */
         }
-
         @media(min-width: 768px) {
             .container {
                 flex-direction: row;
@@ -118,63 +124,18 @@
 
 <div class="navbar">
     <a href="index.html">★Mel</a>
-    <div class="center">Projekte</div>
+    <div class="center">Pose Master</div>
     <a href="https://example.com" class="right">Info</a>
 </div>
 
 <div class="container">
-    <div class="frame">
-        <h2>Teachable Machine</h2>
-        <img src="bilder/pose master.png" alt="Bild 1">
-        <div class="p">
-            <p>
-                Dieses Projekt befasst sich mit der Google Teachable Machine, einem 
-                benutzerfreundlichen Online-Tool, mit dem man ohne Programmierkenntnisse 
-                Modelle für maschinelles Lernen erstellen kann. Die Maschine kann 
-                trainiert werden, um beispielsweise Bilder, Audios oder Posen zu erkennen
-                und sie bestimmten Klassen zuzuordnen.
-            </p>
-        </div>
-        <div class="button-container">
-            <a href="https://teachable-machine-mel.netlify.app" class="button">Projekt</a>
-            <a href="Pose_Master.html" class="button">Prozess</a>
-        </div>
-    </div>
-
-    <div class="frame">
-        <h2>A Generative Story</h2>
-        <img src="bilder/story.png" alt="Bild 2">
-        <div class="p">
-            <p>In diesem Projekt handelt es sich um eine generative Story, die im 
-                Rahmen einer Gruppenarbeit entstanden ist. Die Geschichte wurde 
-                von uns selbst mithilfe von ChatGPT entwickelt. Anschließend haben 
-                wir das KI-Modell von Photoshop genutzt, um die Bilder zu erstellen,
-                 indem wir präzise Anweisungen gegeben haben, was auf den Bildern 
-                 zu sehen sein soll.
-                </p>
-        </div>
-        <div class="button-container">
-            <a href="https://the-most-fanciest-adventure.netlify.app" class="button">Projekt</a>
-            <a href="A_Generative_Story.html" class="button">Prozess</a>
-        </div>
-    </div>
-    
-    <div class="frame">
-        <h2>Ollama </h2>
-        <img src="bilder/stars3.png" alt="Bild 3">
-        <div class="p">
-            <p>Dieses Projekt entstand in einer Gruppenarbeit, bei der wir das Tool 
-                Ollama genutzt haben. Ollama ermöglicht es, fortschrittliche 
-                Sprachtechnologie in unsere Anwendung zu integrieren, indem es 
-                einfache Textbefehle in leistungsstarke Sprachmodelle umsetzt. 
-              </p>
-        </div>
-        <div class="button-container">
-            <a href="https://good-night-poem.netlify.app" class="button">Projekt</a>
-            <a href="Ollama.html" class="button">Prozess</a>
-        </div>
+    <div class="content">
+        <!-- Dein Inhalt hier -->
     </div>
 </div>
+
+<!-- Fixierter Button -->
+<a href="index2.html" class="button fixed-button">zu den Projekten</a>
 
 </body>
 </html>
