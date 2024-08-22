@@ -14,14 +14,14 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #c7c4a298;
+            background-color: #000000;
             overflow-x: hidden; /* Verhindert horizontales Scrollen */
         }
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #152b13da;
+            background-color: #ffffff;
             position: fixed;
             top: 0;
             width: 100%;
@@ -30,53 +30,52 @@
             box-sizing: border-box; /* Stellt sicher, dass Padding und Border zur Gesamtbreite beitragen */
         }
         .navbar a {
-            color: white;
+            color: rgb(0, 0, 0);
             text-align: center;
             text-decoration: none;
             margin: 0px 20px;
         }
         .navbar .center {
             flex-grow: 1;
-            color: white;
+            color: rgb(0, 0, 0);
             font-weight: 700;
             font-size: 25px;
             display: flex;
             justify-content: center;
         }
         .p {
-            margin: 30px 0; /* Abstand oben und unten für das p-Element */
+            margin: 10px 0; /* Abstand oben und unten für das p-Element */
+        }
+        p {
+           color: #ffffff;
         }
         h1 {
             margin-top: 70px; /* Platz für die Navbar */
             color: #23521fda;
         }
+        a {
+            color: #233f21da;
+        }
         .container {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            max-width: 90%;
+            max-width: 900px;
             gap: 20px;
             margin-top: 100px; /* Platz für die fixierte Navbar */
             padding: 0 10px; /* Füge seitlichen Abstand hinzu, um zu verhindern, dass die Inhalte den Rand berühren */
             box-sizing: border-box; /* Stellt sicher, dass Padding zur Gesamtbreite beiträgt */
         }
-        .frame {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Verteilt den Raum zwischen den Elementen */
-            position: relative; /* Für die absolute Positionierung der Buttons */
-            width: 100%;
-            padding: 20px;
-            border: 2px dashed #23521fda;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            box-sizing: border-box; /* Stellt sicher, dass Padding zur Gesamtbreite beiträgt */
+        .content {
+            max-width: 900px; /* Maximale Breite des Textcontainers */
+            margin: 0 auto; /* Zentriert den Textcontainer */
+            text-align: left; /* Optionale Einstellung, um den Text im Blocksatz anzuzeigen */
+            padding-bottom: 100px; /* Fügt Platz am unteren Rand hinzu */
         }
-        .frame img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
+        .content img {
+            max-width: 100%; /* Bilder passen sich der Breite des Containers an */
+            height: auto; /* Beibehaltung des Seitenverhältnisses */
+            display: block; /* Entfernt eventuell vorhandene Abstände unterhalb der Bilder */
         }
         .button-container {
             display: flex;
@@ -85,7 +84,7 @@
             margin-top: 20px; /* Abstand zwischen dem Text und den Buttons */
         }
         .button:hover {
-            background-color: #23521f77;
+            background-color: #fafdd5;
             transform: scale(1.05);
         }
         .button {
@@ -93,20 +92,34 @@
             padding: 12px 25px;
             font-size: 16px;
             font-weight: 700;
-            color: white;
-            background-color: #23521fda;
+            color: rgb(0, 0, 0);
+            background-color: #ffffff;
             border: none;
             border-radius: 15px;
             text-decoration: none;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
- /* Neuer Style für den fixierten Button */
- .fixed-button {
+        /* Neuer Style für den fixierten Button */
+        .fixed-button {
             position: fixed;
             bottom: 20px; /* Abstand vom unteren Rand des Bildschirms */
             left: 20px;   /* Abstand vom linken Rand des Bildschirms */
             z-index: 1000; /* Stelle sicher, dass der Button über anderen Inhalten liegt */
+        }
+        .image-row {
+            display: flex;
+            justify-content: space-between; /* Platz zwischen den Bildern */
+            gap: 10px; /* Abstand zwischen den Bildern */
+            width: 100%; /* Die Bilderreihe nimmt die volle Breite des Containers ein */
+            margin: 0px 0 0px; /* Abstand oberhalb und unterhalb der Bilderreihe */
+            box-sizing: border-box; /* Padding wird zur Breite der Bilderreihe hinzugefügt */
+        }
+        .image-row img {
+            width: 3auto; /* Jedes Bild nimmt ein Drittel der Breite ein */
+            max-width: 100%; /* Bilder werden nicht größer als der Container */
+            height: 33%; /* Beibehaltung des Seitenverhältnisses */
+            object-fit: cover; /* Bild wird skaliert und beschnitten, um in den Container zu passen */
         }
         @media(min-width: 768px) {
             .container {
@@ -130,8 +143,12 @@
 
 <div class="container">
     <div class="content">
-        <!-- Dein Inhalt hier -->
+    <img src="bilder/stars3.png" alt="Bild 2">
     </div>
+    <p>
+        In diesem Projekt habe ich die Teachable Machine genutzt, um ein Spiel zu entwickeln, 
+        bei dem man Posen nachahmen muss. Die Idee basiert auf dem Spiel Just Dance. 
+    </p>
 </div>
 
 <!-- Fixierter Button -->

@@ -14,14 +14,14 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #c7c4a298;
+            background-color: #ffffff;
             overflow-x: hidden; /* Verhindert horizontales Scrollen */
         }
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #152b13da;
+            background-color: #000000ee;
             position: fixed;
             top: 0;
             width: 100%;
@@ -50,6 +50,10 @@
             margin-top: 70px; /* Platz für die Navbar */
             color: #23521fda;
         }
+        a {
+            
+            color: #303030;
+        }
         .container {
             display: flex;
             flex-direction: column;
@@ -64,12 +68,16 @@
             max-width: 900px; /* Maximale Breite des Textcontainers */
             margin: 0 auto; /* Zentriert den Textcontainer */
             text-align: left; /* Optionale Einstellung, um den Text im Blocksatz anzuzeigen */
+            padding-bottom: 100px; /* Fügt Platz am unteren Rand hinzu */
         }
         .content img {
             max-width: 100%; /* Bilder passen sich der Breite des Containers an */
             height: auto; /* Beibehaltung des Seitenverhältnisses */
             display: block; /* Entfernt eventuell vorhandene Abstände unterhalb der Bilder */
-            margin-bottom: 20px; /* Abstand unterhalb der Bilder */
+            margin-bottom: 50px; /* Abstand unterhalb der Bilder */
+        }
+        img[alt="Pose 3"] {
+        margin: 40px auto 50px; /* Zentriert das Bild horizontal und fügt oben und unten Abstand hinzu */
         }
         .frame {
             display: flex;
@@ -91,7 +99,7 @@
             margin-top: 20px; /* Abstand zwischen dem Text und den Buttons */
         }
         .button:hover {
-            background-color: #23521f77;
+            background-color: #00000077;
             transform: scale(1.05);
         }
         .button {
@@ -100,7 +108,7 @@
             font-size: 16px;
             font-weight: 700;
             color: white;
-            background-color: #23521fda;
+            background-color: #000000da;
             border: none;
             border-radius: 15px;
             text-decoration: none;
@@ -119,14 +127,14 @@
             justify-content: space-between; /* Platz zwischen den Bildern */
             gap: 10px; /* Abstand zwischen den Bildern */
             width: 100%; /* Die Bilderreihe nimmt die volle Breite des Containers ein */
-            margin: 20px 0; /* Abstand oberhalb und unterhalb der Bilderreihe */
+            margin: 0px 0 0px; /* Abstand oberhalb und unterhalb der Bilderreihe */
             box-sizing: border-box; /* Padding wird zur Breite der Bilderreihe hinzugefügt */
         }
         .image-row img {
-            flex: 1; /* Bilder teilen sich gleichmäßig die verfügbare Breite */
+            width: 3auto; /* Jedes Bild nimmt ein Drittel der Breite ein */
             max-width: 100%; /* Bilder werden nicht größer als der Container */
-            height: auto; /* Beibehaltung des Seitenverhältnisses */
-            object-fit: contain; /* Bild wird in den Container eingepasst, ohne beschnitten zu werden */
+            height: 33%; /* Beibehaltung des Seitenverhältnisses */
+            object-fit: cover; /* Bild wird skaliert und beschnitten, um in den Container zu passen */
         }
         @media(min-width: 768px) {
             .container {
@@ -153,35 +161,48 @@
         <img src="bilder/pose master.png" alt="Bild 2">
         <p>
             In diesem Projekt habe ich die Teachable Machine genutzt, um ein Spiel zu entwickeln, 
-            bei dem man Posen nachahmen muss. Die Idee basiert auf dem Spiel Just Dance. Mein erster 
-            Schritt bestand darin, die Teachable Machine so zu trainieren, dass sie verschiedene Posen 
+            bei dem man Posen nachahmen muss. Die Idee basiert auf dem Spiel Just Dance. 
+        </p>
+        <p>
+            Mein erster Schritt bestand darin, die Teachable Machine so zu trainieren, dass sie verschiedene Posen 
             erkennen und unterscheiden kann. Dafür habe ich mich selbst fotografiert und pro Pose etwa 
             50 Bilder aus verschiedenen Winkeln und mit unterschiedlichen Körperhaltungen aufgenommen.
-
+        </p>
+        <p>
             Nachdem die Teachable Machine die Posen zuverlässig erkennen konnte, habe ich den generierten 
             Code heruntergeladen und ihn in eine Website integriert. Die Website beginnt mit einer 
             Einführung und einem Countdown, der den Start des Spiels einleitet. Während des Spiels 
             werden die verschiedenen Posen, die ich illustriert habe, angezeigt. 
         </p>
+
         <div class="image-row">
             <img src="bilder/pose1.png" alt="Pose 1">
+            <img src="bilder/pose3.png" alt="Pose 3">
             <img src="bilder/pose2.png" alt="Pose 2">
         </div>
-        <img src="bilder/pose3.png" alt="Pose 3">
-
         <p>
             Darüber sieht man ein Skelettmodell des Spielers, das von der Kamera erfasst wird, sowie eine Prozentanzeige, 
             die zeigt, wie gut die Pose nachgeahmt wurde. Man muss mindestens 80 % erreichen, um zur 
-            nächsten Pose zu gelangen. Andernfalls heißt es "Game Over" und das Spiel beginnt von vorne. 
+            nächsten Pose zu gelangen. 
+        </p>
+
+            <img src="bilder/skelett.png" alt="Pose 3">
+
+        <p>
+            Andernfalls heißt es "Game Over" und das Spiel beginnt von vorne. 
             Hat man alle drei Posen erfolgreich gemeistert, wird man zu einer "You Win"-Seite weitergeleitet, 
             von der aus man das Spiel erneut starten kann.
-            
+        </p>
+        <p>
             Bei der Erstellung der Website gab es einige Herausforderungen. Eine Pose wurde plötzlich 
             nicht mehr erkannt, obwohl sie in der Teachable Machine zuvor funktioniert hatte. Zudem war 
-            es schwierig, das Design der Posenanzeige und der Website harmonisch zu gestalten. In Zukunft 
-            würde ich gerne einen Highscore und ein Punktesystem integrieren, damit das Spiel auch Gegeneinander
-            gespielt werden kann. Dafür müssten allerdings mehr Posen problemlos funktionieren.
+            es schwierig, das Design der Posenanzeige und der Website harmonisch zu gestalten. 
+        </p> 
+        <p>
+            In Zukunft würde ich gerne einen Highscore und ein Punktesystem integrieren, damit das Spiel auch 
+            Gegeneinander gespielt werden kann. Dafür müssten allerdings mehr Posen problemlos funktionieren.
         </p>
+        <a href="https://teachable-machine-mel.netlify.app">Zum Projekt!</a>
     </div>
 </div>
 
