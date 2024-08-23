@@ -17,6 +17,7 @@
             background-color: #c7c4a298;
             overflow-x: hidden; /* Verhindert horizontales Scrollen */
         }
+
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -29,12 +30,14 @@
             padding: 14px 16px;
             box-sizing: border-box; /* Stellt sicher, dass Padding und Border zur Gesamtbreite beitragen */
         }
+
         .navbar a {
             color: white;
             text-align: center;
             text-decoration: none;
             margin: 0px 20px;
         }
+
         .navbar .center {
             flex-grow: 1;
             color: white;
@@ -43,14 +46,17 @@
             display: flex;
             justify-content: center;
         }
+
         .p {
             color: rgb(65, 85, 53);
             margin: 10px 0 10px; /* Abstand oben und unten für das p-Element */
         }
+
         h1 {
             color: #1d441a;
             margin-bottom: 50px;
         }
+
         .container {
             display: flex;
             flex-direction: column;
@@ -61,6 +67,7 @@
             padding: 0 10px; /* Füge seitlichen Abstand hinzu, um zu verhindern, dass die Inhalte den Rand berühren */
             box-sizing: border-box; /* Stellt sicher, dass Padding zur Gesamtbreite beiträgt */
         }
+
         .frame {
             display: flex;
             flex-direction: column;
@@ -72,19 +79,23 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.349);
             text-align: center;
+            margin-bottom: 70px;
             box-sizing: border-box; /* Stellt sicher, dass Padding zur Gesamtbreite beiträgt */
         }
+
         .frame img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
         }
+
         .button-container {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin-top: 20px; /* Abstand zwischen dem Text und den Buttons */
         }
+
         .button {
             display: inline-block;
             padding: 12px 25px;
@@ -98,9 +109,17 @@
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .button:hover {
             background-color: #23521f77;
             transform: scale(1.05);
+        }
+
+        .fixed-button {
+            position: fixed;
+            bottom: 20px; /* Abstand vom unteren Rand des Bildschirms */
+            left: 20px;   /* Abstand vom linken Rand des Bildschirms */
+            z-index: 1000; /* Stelle sicher, dass der Button über anderen Inhalten liegt */
         }
 
         @media(min-width: 768px) {
@@ -120,7 +139,7 @@
 <div class="navbar">
     <a href="index.html">★Mel</a>
     <div class="center">Projekte</div>
-    <a href="https://example.com" class="right">Info</a>
+	<a href="Fazit.html" class="right">Fazit</a>
 </div>
 
 <div class="container">
@@ -152,7 +171,7 @@
                 wir das KI-Modell von Photoshop genutzt, um die Bilder zu erstellen,
                  indem wir präzise Anweisungen gegeben haben, was auf den Bildern 
                  zu sehen sein soll.
-                </p>
+            </p>
         </div>
         <div class="button-container">
             <a href="https://the-most-fanciest-adventure.netlify.app" class="button">Projekt</a>
@@ -164,17 +183,22 @@
         <h1>Ollama </h1>
         <img src="bilder/stars3.png" alt="Bild 3">
         <div class="p">
-            <p>Dieses Projekt entstand in einer Gruppenarbeit, bei der wir das Tool 
+            <p>
+                Dieses Projekt entstand in einer Gruppenarbeit, bei der wir das Tool 
                 Ollama genutzt haben. Ollama ermöglicht es, fortschrittliche 
                 Sprachtechnologie in unsere Anwendung zu integrieren, indem es 
                 einfache Textbefehle in leistungsstarke Sprachmodelle umsetzt. 
-              </p>
+            </p>
         </div>
         <div class="button-container">
             <a href="https://good-night-poem.netlify.app" class="button">Projekt</a>
             <a href="Ollama.html" class="button">Prozess</a>
         </div>
     </div>
+    
+<!-- Fixierter Button -->
+<a href="index.html" class="button fixed-button">Zurück</a>
+
 </div>
 
 </body>

@@ -17,6 +17,7 @@
             background-color: #000000;
             overflow-x: hidden; /* Verhindert horizontales Scrollen */
         }
+
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -29,12 +30,14 @@
             padding: 14px 16px;
             box-sizing: border-box; /* Stellt sicher, dass Padding und Border zur Gesamtbreite beitragen */
         }
+
         .navbar a {
             color: rgb(0, 0, 0);
             text-align: center;
             text-decoration: none;
             margin: 0px 20px;
         }
+
         .navbar .center {
             flex-grow: 1;
             color: rgb(0, 0, 0);
@@ -43,19 +46,24 @@
             display: flex;
             justify-content: center;
         }
+
         .p {
             margin: 10px 0; /* Abstand oben und unten für das p-Element */
         }
+
         p {
            color: #ffffff;
         }
+
         h1 {
             margin-top: 70px; /* Platz für die Navbar */
             color: #23521fda;
         }
+        
         a {
-            color: #233f21da;
+            color: #f8fcd6;
         }
+
         .container {
             display: flex;
             flex-direction: column;
@@ -66,27 +74,32 @@
             padding: 0 10px; /* Füge seitlichen Abstand hinzu, um zu verhindern, dass die Inhalte den Rand berühren */
             box-sizing: border-box; /* Stellt sicher, dass Padding zur Gesamtbreite beiträgt */
         }
+
         .content {
             max-width: 900px; /* Maximale Breite des Textcontainers */
             margin: 0 auto; /* Zentriert den Textcontainer */
             text-align: left; /* Optionale Einstellung, um den Text im Blocksatz anzuzeigen */
             padding-bottom: 100px; /* Fügt Platz am unteren Rand hinzu */
         }
+
         .content img {
             max-width: 100%; /* Bilder passen sich der Breite des Containers an */
             height: auto; /* Beibehaltung des Seitenverhältnisses */
             display: block; /* Entfernt eventuell vorhandene Abstände unterhalb der Bilder */
         }
+        
         .button-container {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin-top: 20px; /* Abstand zwischen dem Text und den Buttons */
         }
+
         .button:hover {
             background-color: #fafdd5;
             transform: scale(1.05);
         }
+
         .button {
             display: inline-block;
             padding: 12px 25px;
@@ -100,6 +113,7 @@
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         /* Neuer Style für den fixierten Button */
         .fixed-button {
             position: fixed;
@@ -107,6 +121,7 @@
             left: 20px;   /* Abstand vom linken Rand des Bildschirms */
             z-index: 1000; /* Stelle sicher, dass der Button über anderen Inhalten liegt */
         }
+
         .image-row {
             display: flex;
             justify-content: space-between; /* Platz zwischen den Bildern */
@@ -115,12 +130,33 @@
             margin: 0px 0 0px; /* Abstand oberhalb und unterhalb der Bilderreihe */
             box-sizing: border-box; /* Padding wird zur Breite der Bilderreihe hinzugefügt */
         }
+
+        img[alt="Bild 2"] {
+        margin: 5px auto 90px; /* Zentriert das Bild horizontal und fügt oben und unten Abstand hinzu */
+        }
+
+        .star-image {
+            display: block;
+            width: 100%;
+            max-width: 900px;
+            margin: 90px auto 0px; /* Abstand oben und unten von 20px */
+        }
+
+        img[alt="poem"] {
+        margin: 5px auto 70px; /* Zentriert das Bild horizontal und fügt oben und unten Abstand hinzu */
+        }
+        
+        img[alt="poem2"] {
+        margin: 70px auto 40px; /* Zentriert das Bild horizontal und fügt oben und unten Abstand hinzu */
+        }
+
         .image-row img {
             width: 3auto; /* Jedes Bild nimmt ein Drittel der Breite ein */
             max-width: 100%; /* Bilder werden nicht größer als der Container */
             height: 33%; /* Beibehaltung des Seitenverhältnisses */
             object-fit: cover; /* Bild wird skaliert und beschnitten, um in den Container zu passen */
         }
+
         @media(min-width: 768px) {
             .container {
                 flex-direction: row;
@@ -138,17 +174,68 @@
 <div class="navbar">
     <a href="index.html">★Mel</a>
     <div class="center">Good Night Poem</div>
-    <a href="https://example.com" class="right">Info</a>
+	<a href="Fazit.html" class="right">Fazit</a>
 </div>
 
 <div class="container">
     <div class="content">
     <img src="bilder/stars3.png" alt="Bild 2">
-    </div>
     <p>
-        In diesem Projekt habe ich die Teachable Machine genutzt, um ein Spiel zu entwickeln, 
-        bei dem man Posen nachahmen muss. Die Idee basiert auf dem Spiel Just Dance. 
+        Dieses Projekt entstand in Zusammenarbeit mit Anna Bansmann. Gemeinsam haben wir 
+        mithilfe von Ollama eine Website entwickelt, die einen Sternenhimmel und 
+        Gute-Nacht-Gedichte generiert. 
     </p>
+
+    <p>
+        Ollama ermöglicht es, fortschrittliche Sprachtechnologie 
+        in unsere Anwendung zu integrieren, indem es einfache Textbefehle in leistungsstarke 
+        Sprachmodelle umwandelt. Um jedoch die gewünschten Ergebnisse zu erzielen, 
+        mussten wir zahlreiche Tests mit spezifischen Vorgaben durchführen, die die KI 
+        umsetzen sollte. Dabei stießen wir oft auf Schwierigkeiten, da die KI manche 
+        Anweisungen ignorierte oder anders umsetzte, als wir es beabsichtigt hatten. 
+    </p>
+
+    <p>
+        Nach vielen Versuchen und dem Vorzeigen eigener Beispiele von Sternenhimmeln, 
+        die wir als Vorlage verwendeten, gelang es uns schließlich, akzeptable Ergebnisse 
+        zu erzielen. 
+    </p>
+
+    <img src="bilder/star.png" alt="star" class="star-image">
+
+    <img src="bilder/poem2.png" alt="poem">
+
+    <p>
+        Gelegentlich generierte die KI genau das, was wir uns vorgestellt hatten, 
+        aber es kam auch vor, dass unerwünschte Elemente eingefügt wurden, die wir 
+        ausdrücklich ausgeschlossen hatten. Bei längerer Nutzung von Ollama fielen uns 
+        zudem seltsame Ergebnisse auf, die völlig von unseren Vorgaben abwichen, weshalb 
+        wir oft gezwungen waren, Pausen einzulegen, wenn wir nicht weiterkamen.
+    </p>
+
+
+    <img src="bilder/poem.png" alt="poem2">#
+
+    <p>
+        Nachdem wir Ollama einigermaßen erfolgreich trainiert hatten, begannen wir mit 
+        der Gestaltung der Website. Da die Generierung durch Ollama einige Zeit in Anspruch 
+        nimmt, war es sinnvoll, eine Art Ladeanzeige einzubauen. Dafür haben wir einen Mond 
+        verwendet, der beim Anklicken den Generierungsprozess startet und blinkt, 
+        bis dieser abgeschlossen ist. Anschließend wird der generierte Sternenhimmel im 
+        Hintergrund angezeigt, während das Gedicht darunter erscheint. Wenn der Mauszeiger 
+        über den Sternenhimmel fährt, leuchtet dieser wie der Mond gelb auf.
+    </p>
+
+    <p>
+        Obwohl das Projekt damit weitgehend abgeschlossen war, traten zum Schluss immer 
+        wieder dieselben Probleme mit Ollama auf. Die KI generierte weiterhin falsche Texte 
+        oder fügte Emojis ein, obwohl wir klar vorgegeben hatten, dass keine verwendet 
+        werden sollten. An diesem Punkt kamen wir nicht mehr weiter und fanden leider keine 
+        Lösung, um diese Fehler zu beheben.
+    </p>
+
+    <a href="https://good-night-poem.netlify.app">Zum Projekt!</a>
+    </div>
 </div>
 
 <!-- Fixierter Button -->

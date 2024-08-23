@@ -17,6 +17,7 @@
             background-color: #725d4486;
             overflow-x: hidden; /* Verhindert horizontales Scrollen */
         }
+
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -29,12 +30,14 @@
             padding: 14px 16px;
             box-sizing: border-box; /* Stellt sicher, dass Padding und Border zur Gesamtbreite beitragen */
         }
+
         .navbar a {
             color: white;
             text-align: center;
             text-decoration: none;
             margin: 0px 20px;
         }
+
         .navbar .center {
             flex-grow: 1;
             color: white;
@@ -43,13 +46,16 @@
             display: flex;
             justify-content: center;
         }
+
         h1 {
             margin-top: 70px; /* Platz für die Navbar */
             color: #23521fda;
         }
+
         a {
             color: #252010da;
         }
+        
         .container {
             display: flex;
             flex-direction: column;
@@ -60,28 +66,33 @@
             padding: 0 10px; /* Füge seitlichen Abstand hinzu, um zu verhindern, dass die Inhalte den Rand berühren */
             box-sizing: border-box; /* Stellt sicher, dass Padding zur Gesamtbreite beiträgt */
         }
+
         .content {
             max-width: 900px; /* Maximale Breite des Textcontainers */
             margin: 0 auto; /* Zentriert den Textcontainer */
             text-align: left; /* Optionale Einstellung, um den Text im Blocksatz anzuzeigen */
             padding-bottom: 100px; /* Fügt Platz am unteren Rand hinzu */
         }
+
         .content img {
             max-width: 100%; /* Bilder passen sich der Breite des Containers an */
             height: auto; /* Beibehaltung des Seitenverhältnisses */
             display: block; /* Entfernt eventuell vorhandene Abstände unterhalb der Bilder */
             margin-bottom: 40px; /* Abstand unterhalb der Bilder */
         }
+
         .button-container {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin-top: 20px; /* Abstand zwischen dem Text und den Buttons */
         }
+
         .button:hover {
             background-color: #0f0e0844;
             transform: scale(1.05);
         }
+
         .button {
             display: inline-block;
             padding: 12px 25px;
@@ -95,6 +106,7 @@
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         /* Neuer Style für den fixierten Button */
         .fixed-button {
             position: fixed;
@@ -102,6 +114,7 @@
             left: 20px;   /* Abstand vom linken Rand des Bildschirms */
             z-index: 1000; /* Stelle sicher, dass der Button über anderen Inhalten liegt */
         }
+
         .image-row {
             display: flex;
             justify-content: space-between; /* Platz zwischen den Bildern */
@@ -109,12 +122,15 @@
             margin: 40px 0 10px; /* Abstand oberhalb und unterhalb der Bilderreihe */
             box-sizing: border-box; /* Padding wird zur Breite der Bilderreihe hinzugefügt */
         }
+
         img[alt="Bild 2"] {
         margin: 5px auto 70px; /* Zentriert das Bild horizontal und fügt oben und unten Abstand hinzu */
         }
+
         img[alt="story 1"] {
         margin: 40px auto 50px; /* Zentriert das Bild horizontal und fügt oben und unten Abstand hinzu */
         }
+
         .image-row img {
             width: calc(50% - 5px); /* Jedes Bild nimmt die Hälfte der Breite ein, abzüglich des Abstands */
             height: auto; /* Beibehaltung des Seitenverhältnisses */
@@ -137,7 +153,7 @@
 <div class="navbar">
     <a href="index.html">★Mel</a>
     <div class="center">The Most Fanciest Adventure</div>
-    <a href="https://example.com" class="right">Info</a>
+	<a href="Fazit.html" class="right">Fazit</a>
 </div>
 
 <div class="container">

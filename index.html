@@ -16,6 +16,7 @@
             height: 100vh;
             background-color: #c7c4a298;
         }
+
         .container {
             display: flex;
             flex-direction: column;
@@ -23,12 +24,14 @@
             text-align: center;
             max-width: 90%;
         }
+
         .content {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
+
         img {
             max-width: 80%;
             height: auto;
@@ -55,27 +58,30 @@
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .button:hover {
             background-color: #23521f77;
             transform: scale(1.05);
 		}
 
-
-			.navbar {
-            overflow: hidden;
+		.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #152b13da;
             position: fixed;
             top: 0;
             width: 100%;
-            z-index: 1000; /* Stelle sicher, dass die Navbar über anderen Inhalten liegt */
+            z-index: 1000;
+            padding: 14px 16px;
+            box-sizing: border-box; /* Stellt sicher, dass Padding und Border zur Gesamtbreite beitragen */
         }
+
         .navbar a {
-            float: left;
-            display: block;
             color: white;
             text-align: center;
-            padding: 14px 16px;
             text-decoration: none;
+            margin: 0px 20px;
         }
        
         .navbar a.right {
@@ -101,14 +107,19 @@
 	
 <div class="navbar">
 	<a href="index.html">★Mel</a>
-	<a href="https://example.com" class="right">Info</a>
-  </div>
+	<a href="Fazit.html" class="right">Fazit</a>
+</div>
 
     <div class="container">
         <img src="bilder/stern2.png" alt="">
         <div class="content">
             <img src="bilder/portfolio.png" alt="">
-            <p>Willkommen auf meiner Website! Hier präsentiere ich Ihnen meine Arbeiten und Projekte, die während des zweiten Semesters im Kurs "Grundlagen der digitalen Kommunikation 2" entstanden sind.</p>
+            <p>
+                Willkommen auf meiner Website! Hier präsentiere ich Ihnen 
+                meine Arbeiten und Projekte, die während des zweiten 
+                Semesters im Kurs "Grundlagen der digitalen Kommunikation 2" 
+                entstanden sind.
+            </p>
             <a href="index2.html" class="button">zu den Projekten</a>
         </div>
     </div>

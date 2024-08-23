@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #c7c4a298;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Bild und Text nebeneinander anordnen */
+    align-items: flex-start;
+    max-width: 80%;
+    margin-top: 100px; /* Platz für die fixierte Navbar */
+}
+
+img {
+    max-width: 40%; /* Bild nimmt 40% des Containers ein */
+    height: auto;
+    margin-right: 20px; /* Abstand zwischen Bild und Text */
+}
+
+.content {
+    max-width: 60%; /* Textcontainer nimmt 60% des Containers ein */
+    text-align: left; /* Text linksbündig ausrichten */
+}
+
+p {
+    color: rgb(65, 85, 53);
+    margin: 30px 0 40px 0;
+    font-weight: 400;
+    max-width: 500px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background-color: #23521fda;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #23521f77;
+    transform: scale(1.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #152b13da;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 14px 16px;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 20px;
+}
+
+.navbar a.right {
+    float: right;
+}
+
+.navbar .center {
+    flex-grow: 1;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.fixed-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+@media(max-width: 768px) {
+    .container {
+        flex-direction: column; /* Bei kleinen Bildschirmen Bild und Text untereinander anordnen */
+        align-items: center;
+    }
+
+    img {
+        max-width: 100%; /* Bild nimmt bei kleinen Bildschirmen die volle Breite ein */
+        margin-right: 0;
+        margin-bottom: 20px; /* Abstand unterhalb des Bildes */
+    }
+
+    .content {
+        max-width: 100%; /* Textcontainer nimmt die volle Breite ein */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">★Mel</a>
+    <div class="center">Fazit</div>
+	<a href="index2.html" class="right">Projekte</a>
+</div>
+
+<div class="container">
+    <img src="bilder/stern2.png" alt="stern">
+    <div class="content">
+        <p>
+            Als Fazit zum Kurs "Grundlagen der digitalen Kommunikation 2" kann ich sagen, 
+            dass ich viele neue Erfahrungen gesammelt habe. 
+        </p>
+            
+        <p>
+            Wenn ich bedenke, dass ich 
+            im ersten Semester ohne Vorkenntnisse oder Erfahrungen in diesem Bereich 
+            gestartet bin, und dies mit meinem aktuellen Stand vergleiche, sehe ich, 
+            wie viel ich gelernt habe. Ob es darum geht, eine eigene Website zu erstellen 
+            oder mit verschiedenen KI-Tools zu arbeiten – ich habe in vielen Bereichen 
+            Fortschritte gemacht. Natürlich gibt es noch einige Herausforderungen, 
+            aber insgesamt bin ich zufrieden mit dem, was ich aus diesem Kurs mitnehmen 
+            konnte, einschließlich der wertvollen Kritik und Rückmeldungen des Dozenten 
+            zu jedem Projekt. 
+        </p>
+
+        <p>
+            Ich bin froh, diesen Kurs mit all den gewonnenen Erfahrungen 
+            abschließen zu können.
+        </p>
+    </div>
+</div>
+
+<!-- Fixierter Button -->
+<a href="index.html" class="button fixed-button">Zurück</a>
+
+</body>
+</html>
