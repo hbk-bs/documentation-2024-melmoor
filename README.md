@@ -3,3 +3,15 @@
 # DON'T FORGET THE README! Explain what I will find here. Link your projects!
 
 - DONT FORGET THE LICENSE!
+
+Dokumentation mit dem Inhalt:
+
+Einleitung
+
+Teachable Machine "Pose Master" 
+
+Ollama "Good Night Poem"
+
+A Generative Story "The most fanciest Adventure"
+
+Fazit
